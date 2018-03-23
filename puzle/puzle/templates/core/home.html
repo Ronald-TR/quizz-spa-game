@@ -1,0 +1,22 @@
+{% extends 'core/index.html' %}
+{% block body %}
+
+<div class="center">
+    <h1>Bem vindo a primeira fase</h1>
+    <p>woho!</p>
+    <br>
+    <br>
+    <p>Você tem um cachorro chamado nabunda</p>
+    <p>você está num barco com ele, e o barco está afundando</p>
+    <p>você tem somente um bote salva vidas</p>
+    <p>o que você faz?</p>
+    <p>você deixa nabunda, ou você leva nabunda?</p>
+    <form action="/statement" method="POST">
+        {% csrf_token %}
+        <input type="text" name="sql" id="nabunda" size="40">
+        <button type="submit">OK</button>
+    </form>
+</div>
+
+
+{% endblock %}
